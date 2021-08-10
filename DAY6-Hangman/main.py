@@ -15,7 +15,8 @@ def clear():
 params = {
     "play": True,
     "words": [],
-    "score": 6
+    "score": 6,
+    "letter": ""
 }
 
 
@@ -26,14 +27,26 @@ def setup():
     params["words"] = [x.strip() for x in params["words"]]
 
 
+def prompt_for_guess():
+    global params
+    params["guess"] = input("Guess a letter: ").lower()
+
+def draw_gallows():
+    global params
+    print(stages[params["score"]])
+
 def display():
     global params
     clear()
     print(logo)
+    print()
+    draw_gallows()
+    prompt_for_guess()
 
 
 def main_loop():
-    while play == True:
+    global params
+    while params["play"] == True:
         pass
 
 
