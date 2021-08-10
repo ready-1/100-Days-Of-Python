@@ -1,6 +1,6 @@
 from stages import stages
 from logo import logo
-from os import system
+from os import system, name
   
 # borrowed from https://www.geeksforgeeks.org/clear-screen-python/
 def clear():  
@@ -27,8 +27,8 @@ def setup():
 
 def display():
     global params
-
     clear()
+    print(logo)
 
 
 def main_loop():
@@ -37,4 +37,5 @@ def main_loop():
 
 
 setup()
+display()
 
