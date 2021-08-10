@@ -14,7 +14,8 @@ def clear():
 
 params = {
     "play": True,
-    "words": []
+    "words": [],
+    "score": 6
 }
 
 
