@@ -181,5 +181,6 @@ class Game:
         print(f'HISTORY: {self.history}')
 
 
-g = Game()
-g.play_game()
+def play():
+    g = Game()
+    g.play_game()
