@@ -2,7 +2,7 @@ from random import randint
 from os import system, path, name
 import linecache
 from pprint import pprint as pp
-from day6hangmanOOP.assets import logo, stages
+from day7hangmanOOP.assets import logo, stages
 from string import ascii_letters as ascii_letters
 import string
 
@@ -133,7 +133,7 @@ class Game:
                 self.flash_message = "GAME OVER"
 
     def refresh_display(self):
-        self.status()
+        # self.status()
         self.clear()
         self.display_logo()
         self.display_stage_graphic()

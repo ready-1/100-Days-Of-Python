@@ -2,9 +2,9 @@ from bk_utils import clear
 
 
 menu_items = [
-    ["Day 6 - Hangman", "from day6hangman import hangman as hangman",
+    ["Day 6 - Hangman", "from day7hangman import hangman as hangman",
         "hangman.main_loop()"],
-    ["Day 6 - Hangman OOP", "from day6hangmanOOP import hangmanOOP as hangmanOOP",
+    ["Day 6 - Hangman OOP", "from day7hangmanOOP import hangmanOOP as hangmanOOP",
         "hangmanOOP.play()"],
 ]
 
