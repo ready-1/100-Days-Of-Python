@@ -1,3 +1,8 @@
+# This is not a polished app.  It still needs some input validation
+# and a clean front end.  This project is meant to show list manipulation.
+# There is a need to refactor to combine the encode & decode functions into
+# one function with some logic to manage the character pools.
+
 from os import system, name
 from string import ascii_letters, digits, punctuation, whitespace
 
@@ -76,11 +81,13 @@ def apply_shift(shift, unshifted):
 
 
 def main():
+    clear()
     shift = int(input("Enter the shift: "))
     operation = input("Ender 'encode' or 'decode': ")
     text = input("Enter the text: ")
 
     result = ""
+
     if operation == 'encode':
         result = encode(text, shift)
     else:
@@ -88,5 +95,4 @@ def main():
 
     print(result)
 
-
-main()
+    print(input("<Enter> to continue..."))

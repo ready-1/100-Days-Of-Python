@@ -17,15 +17,18 @@ def calculate_coverage(height, width, coverage):
     return ceil(cans_required)
 
 
-clear()
+def main():
+    clear()
 
-height = int(input("What is the height of the wall? "))
-width = int(input("What is the  of the wall? "))
-coverage = int(input("What is the per can? "))
+    height = int(input("What is the height of the wall? "))
+    width = int(input("What is the  of the wall? "))
+    coverage = int(input("What is the per can? "))
 
-total_cans = calculate_coverage(height, width, coverage)
+    total_cans = calculate_coverage(height, width, coverage)
 
-print(f"HEIGHT: {height}")
-print(f"WIDTH: {width}")
-print(f"COVERAGE: {coverage}")
-print(f"You will need {total_cans} cans of paint.")
+    print(f"HEIGHT: {height}")
+    print(f"WIDTH: {width}")
+    print(f"COVERAGE: {coverage}")
+    print(f"You will need {total_cans} cans of paint.")
+
+    print(input("<Enter> to continue..."))

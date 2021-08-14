@@ -20,10 +20,13 @@ def prime_checker(number):
     return is_prime
 
 
-clear()
-number = int(input("Enter a number: "))
+def main():
+    clear()
+    number = int(input("Enter a number: "))
 
-if prime_checker(number):
-    print("It's a prime number.")
-else:
-    print("It's not a prime number.")
+    if prime_checker(number):
+        print("It's a prime number.")
+    else:
+        print("It's not a prime number.")
+
+    print(input("<Enter> to continue..."))

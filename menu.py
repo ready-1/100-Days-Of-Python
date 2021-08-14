@@ -2,10 +2,16 @@ from bk_utils import clear
 
 
 menu_items = [
-    ["Day 6 - Hangman", "from day7hangman import hangman as hangman",
+    ["Day 7 - Hangman", "from day7hangman import hangman as hangman",
         "hangman.main_loop()"],
-    ["Day 6 - Hangman OOP", "from day7hangmanOOP import hangmanOOP as hangmanOOP",
+    ["Day 7 - Hangman OOP", "from day7hangmanOOP import hangmanOOP as hangmanOOP",
         "hangmanOOP.play()"],
+    ["Day 8 - Paint Coverage Calculator",
+        "from day8 import area_calc as d8area", "d8area.main()"],
+    ["Day 8 - Prime Checker",
+        "from day8 import prime_finder as d8prime", "d8prime.main()"],
+    ["Day 8 - Caesar Cipher",
+        "from day8 import caesar as d8caesar", "d8caesar.main()"],
 ]
 
 
@@ -28,9 +34,10 @@ def menu():
         if choice.lower() == "q":
             clear()
             exit()
-
-        print(dir())
-        exec(f"{menu_items[int(choice) - 1][2]}")
+        elif int(choice) in range(1, len(menu_items) + 1):
+            exec(f"{menu_items[int(choice) - 1][2]}")
+        else:
+            pass
 
 
 menu()
