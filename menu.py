@@ -1,5 +1,7 @@
 from bk_utils import clear
+import locale
 
+locale.setlocale(locale.LC_ALL, '')
 
 menu_items = [
     ["Day 7 - Hangman", "from day7hangman import hangman as hangman",
@@ -12,6 +14,8 @@ menu_items = [
         "from day8 import prime_finder as d8prime", "d8prime.main()"],
     ["Day 8 - Caesar Cipher",
         "from day8 import caesar as d8caesar", "d8caesar.main()"],
+    ["Day 9 - Caesar Cipher",
+     "from day9 import auction as d9auction", "d9auction.main()"],
 ]
 
 

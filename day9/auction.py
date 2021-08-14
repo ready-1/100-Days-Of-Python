@@ -1,5 +1,6 @@
 from os import system, name
 from day9.art import logo as logo
+import locale
 
 
 def clear():
@@ -45,7 +46,8 @@ def display_winner(bids):
             winner["name"] = bid["name"]
             winner["bid"] = bid["bid"]
 
-    print(f'The winner is {winner["name"]} with a bid of ${winner["bid"]}')
+    winning_amount = locale.currency(float(winner["bid"]), grouping=True)
+    print(f'The winner is {winner["name"]} with a bid of {winning_amount}')
 
 
 def main():
