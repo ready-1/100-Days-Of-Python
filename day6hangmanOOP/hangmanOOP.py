@@ -2,7 +2,7 @@ from random import randint
 from os import system, path, name
 import linecache
 from pprint import pprint as pp
-from assets import logo, stages
+from day6hangmanOOP.assets import logo, stages
 from string import ascii_letters as ascii_letters
 import string
 
@@ -49,6 +49,7 @@ class Game:
     def display_logo(self):
         global logo
         print(logo)
+        print("Object Oriented Version")
 
     def display_stage_graphic(self):
         # display the current gallows
