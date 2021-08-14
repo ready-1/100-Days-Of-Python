@@ -1,5 +1,5 @@
 from os import system, name
-from art import logo as logo
+from day9.art import logo as logo
 
 
 def clear():
@@ -54,3 +54,4 @@ def main():
     display_logo()
     bids = take_bids()
     display_winner(bids)
+    input("<Enter> to continue...")
