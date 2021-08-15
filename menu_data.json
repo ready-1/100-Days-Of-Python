@@ -1,0 +1,33 @@
+{
+    "data": [{
+            "menu_item": "Day 7 - Hangman",
+            "import_command": "from day7hangman import hangman as hangman",
+            "execution_command": "hangman.main_loop()"
+        },
+        {
+            "menu_item": "Day 7 - Hangman OOP",
+            "import_command": "from day7hangmanOOP import hangmanOOP as hangmanOOP",
+            "execution_command": "hangmanOOP.play()"
+        },
+        {
+            "menu_item": "Day 8 - Paint Coverage Calculator",
+            "import_command": "from day8 import area_calc as d8area",
+            "execution_command": "d8area.main()"
+        },
+        {
+            "menu_item": "Day 8 - Prime Checker",
+            "import_command": "from day8 import prime_finder as d8prime",
+            "execution_command": "d8prime.main()"
+        },
+        {
+            "menu_item": "Day 8 - Caesar Cipher",
+            "import_command": "from day8 import caesar as d8caesar",
+            "execution_command": "d8caesar.main()"
+        },
+        {
+            "menu_item": "Day 9 - Silent Auction",
+            "import_command": "from day9 import auction as d9auction",
+            "execution_command": "d9auction.main()"
+        }
+    ]
+}
