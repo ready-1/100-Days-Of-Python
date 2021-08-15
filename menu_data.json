@@ -28,6 +28,11 @@
             "menu_item": "Day 9 - Silent Auction",
             "import_command": "from day9 import auction as d9auction",
             "execution_command": "d9auction.main()"
+        },
+        {
+            "menu_item": "Day 10 - Calculator",
+            "import_command": "from day10 import calculator as d10calc",
+            "execution_command": "d10calc.main()"
         }
     ]
 }
