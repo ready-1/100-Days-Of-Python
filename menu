@@ -7,10 +7,6 @@ import json
 locale.setlocale(locale.LC_ALL, '')
 
 
-# {'data': [{'execution_command': 'hangman.main_loop()',
-#            'import_command': 'from day7hangman import hangman as hangman',
-#            'menu_item': 'Day 7 - Hangman'},
-
 def load_menu_data_json(filename):
     with open(filename, "r") as f:
         data = json.load(f)
