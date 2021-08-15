@@ -1,3 +1,11 @@
+"""Calculator
+
+    Small calculator app to demonstrate function returns and object referencing.
+    """
+
+# import the logo art
+from art import logo as logo
+
 
 def add(num1, num2):
     """Addition
@@ -66,6 +74,10 @@ operations = {
     "*": muiltiply,
     "/": divide
 }
+
+
+# display the artwork
+print(logo)
 
 # show the available operations
 for symbol in operations:
