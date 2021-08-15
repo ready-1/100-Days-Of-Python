@@ -4,7 +4,7 @@
     """
 
 # import the logo art
-from art import logo as logo
+from day10.art import logo as logo
 # import os for the clear function
 from os import system, name
 
@@ -144,8 +144,16 @@ def calculator():
             calculator()
 
 
-calculator()
+def main()
 
+
+"""Main function
+
+    Starts and ends the app.
+    """
+
+# start the app
+calculator()
 # clear the screen, display art, exit the app.
 clear()
 print(logo)
