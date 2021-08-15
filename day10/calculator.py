@@ -144,17 +144,15 @@ def calculator():
             calculator()
 
 
-def main()
+def main():
+    """Main function
 
+        Starts and ends the app.
+        """
 
-"""Main function
-
-    Starts and ends the app.
-    """
-
-# start the app
-calculator()
-# clear the screen, display art, exit the app.
-clear()
-print(logo)
-print("Goodbye!")
+    # start the app
+    calculator()
+    # clear the screen, display art, exit the app.
+    clear()
+    print(logo)
+    print("Goodbye!")
