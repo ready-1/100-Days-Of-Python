@@ -1,43 +1,104 @@
 #!python
+# handy little clear function
 from bk_utils import clear
+# eye candy
 from pprint import pprint as pp
+# for IL8N of formatting
 import locale
+# JSON.  'nuf said.
 import json
 
+# set the locale for currency formatting
 locale.setlocale(locale.LC_ALL, '')
 
 
 def load_menu_data_json(filename):
+    """Loads the menu data file
+
+    Loads the JSON menu datafile into a Python dictionary.
+
+    Args:
+        filename (string): name of JSON file with menu data
+
+    Returns:
+        list: a collection of menu items
+    """
+    # read the JSON data into a python dict
     with open(filename, "r") as f:
         data = json.load(f)
+    # return the "data" list from the JSON object
     return data["data"]
 
 
 def display_menu(menu_items):
+    """Display the menu
+
+    Displays the menu listings for all the items in menu_items
+
+    Args:
+        menu_items (list): collection of menu items to display
+    """
+    # clear the screen
     clear()
+    # show the title bar
     print("       MENU\n========================")
+    # iterate through the items collection and display each item
     for i in range(0, len(menu_items)):
         print(f'{i + 1}: {menu_items[i]["menu_item"]}')
+    # show option to quit
     print("Q: Quit\n")
 
 
-def menu():
-    menu_items = load_menu_data_json("menu_data.json")
-    pp(menu_items)
-    for item in menu_items:
-        print(f'Executing \"{item["import_command"]}\"...')
-        exec(f'{item["import_command"]}')
+def menu(menu_items):
+    """Menu logic function
 
+    1. Starts the main loop of the menu
+    2. Calls the display_menu function
+    3. Prompts for menu selection
+    4. Handles the menu logic
+        Q -> quit the app
+        Valid Item -> execute the item's execution_command
+        Else -> loop
+
+    Args:
+        menu_items (list): collection of menu items
+    """
     while True:
+        # display the menu
         display_menu(menu_items)
+        # prompt for choice
         choice = input("Option: ")
+        # begin menu logic
+        # Q == quit the app
         if choice.lower() == "q":
             clear()
             exit()
+        # Valid Choice == execute the script
         elif int(choice) in range(1, len(menu_items) + 1):
             exec(f'{menu_items[int(choice) - 1]["execution_command"]}')
+        # Otherwise loop the menu
         else:
             pass
 
 
-menu()
+def import_menu_items(menu_items):
+    """Imports the scripts for each menu item
+
+    Iterates over the menu_items collection and imports the script for that item.
+
+    Args:
+        menu_items (list): collection of menu items
+    """
+    for item in menu_items:
+        print(f'Executing \"{item["import_command"]}\"...')
+        exec(f'{item["import_command"]}')
+
+
+def main():
+    """Main function
+
+    Starts the app, calls the import function and runs the menu
+    """
+    menu_items = load_menu_data_json("menu_data.json")
+    import_menu_items(menu_items)
+    menu(menu_items)
