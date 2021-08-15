@@ -5,6 +5,22 @@
 
 # import the logo art
 from art import logo as logo
+# import os for the clear function
+from os import system, name
+
+
+def clear():
+    """Clear the screen
+
+    Use the system clear command to clear the terminal screen.
+    This does not clear the history or scrollback.
+    """
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
 
 def add(num1, num2):
@@ -75,6 +91,8 @@ operations = {
     "/": divide
 }
 
+# clear the screen
+clear()
 
 # display the artwork
 print(logo)
